@@ -1,16 +1,16 @@
-import { Flex } from "@chakra-ui/react";
-import { Item } from "./item";
+import { GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Item } from "./Item";
 
 
 export function Feature() {
 
   return (
-    <Flex p="114px 140px" justifyContent="space-between">
-      <Item text="vida noturna" imgSrc="/images/cocktail-1.svg"/>
-      <Item text="praia" imgSrc="/images/surf-1.svg"/>
-      <Item text="moderno" imgSrc="/images/building-1.svg"/>
-      <Item text="clássico" imgSrc="/images/museum-1.svg" />
-      <Item text="e mais..." imgSrc="/images/earth-1.svg" />
-    </Flex>
+    <SimpleGrid p="114px 70px" minChildWidth="150px">
+      <GridItem><Item text="vida noturna" imgSrc="/images/cocktail-1.svg"/></GridItem>
+      <GridItem><Item text="praia" imgSrc="/images/surf-1.svg"/></GridItem>
+      <GridItem><Item text="moderno" imgSrc="/images/building-1.svg"/></GridItem>
+      <GridItem><Item text="clássico" imgSrc="/images/museum-1.svg" /></GridItem>
+      <GridItem><Item text="e mais..." imgSrc="/images/earth-1.svg" /></GridItem>
+    </SimpleGrid>
   )
 }
