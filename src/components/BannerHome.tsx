@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 
-export function Banner() {
+export function BannerHome() {
   return (
     <Box bgImage="/images/banner-bg.svg" h="335px">
       <Flex px="140px" justifyContent="space-between" gap="60">

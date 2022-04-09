@@ -1,5 +1,5 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
-import { Banner } from "../components/Banner";
+import { BannerHome } from "../components/BannerHome";
 import { Feature } from "../components/Features";
 import { Header } from "../components/Header";
 import { Slider } from '../components/Slider';
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Banner />
+      <BannerHome />
       <Feature />
       <Center p="12px 0 80px 0">
         <Box width="90px" bg="#000" h="2px"/>
