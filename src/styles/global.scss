@@ -1,0 +1,39 @@
+.swiper-pagination {
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.swiper-pagination-bullet {
+  background: #999999 !important;
+  width: 16px !important;
+  height: 16px !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFBA08 !important;
+}
+
+.swiper-button-next {
+  background-image: url('../../public/images/chevron-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 20px !important;
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  background-image: url('../../public/images/chevron-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateY(180deg);
+  left: 20px !important;
+  &::after {
+    display: none;
+  }
+}
