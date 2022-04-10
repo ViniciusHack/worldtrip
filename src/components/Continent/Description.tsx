@@ -4,13 +4,11 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 export function Description() {
   return (
-    <Flex w="100%" 
-    maxW="1160px" 
-    margin="0 auto"
-    gap="70" 
-    py="20"
-    color="gray.900"
-    align="center"
+    <Flex
+      py="20"
+      color="gray.900"
+      align="center"
+      gap="70" 
     >
       <Text w="600px" textAlign="justify" fontSize={24}>A Europa é, por convenção, um dos seis continentes do mundo. 
         Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória
