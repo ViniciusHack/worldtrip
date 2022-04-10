@@ -24,8 +24,8 @@ export default function Home() {
       <Header />
       <BannerHome />
       <Feature />
-      <Center p="12px 0 80px 0">
-        <Box width="90px" bg="#000" h="2px"/>
+      <Center p="10px 0 50px 0">
+        <Box width="90px" bgColor="gray.900" h="2px"/>
       </Center>
         <Box textAlign="center" pb="52px">
           <Heading fontWeight={500} color="gray.900" lineHeight="54px">Vamos nessa?<br />Então escolha seu continente</Heading>

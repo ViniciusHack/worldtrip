@@ -119,46 +119,22 @@ export const mockContinents: Continent[] = [
     bgImage: "http://localhost:3000/images/south-1.jpg",
     citiesOver100: [
       {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
+        name: "Cidade de Buenos Aires",
+        country: "Argentina",
+        countryFlagImage: "http://localhost:3000/images/icons/argentina.png",
+        cityImage: "http://localhost:3000/images/aires.jpg",
       },
       {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
+        name: "Rio de Janeiro",
+        country: "Brasil",
+        countryFlagImage: "http://localhost:3000/images/icons/brazil.png",
+        cityImage: "http://localhost:3000/images/janeiro.jpg",
       },
-      {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
-      },
-      {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
-      },
-      {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
-      },
-      {
-        name: "Londres",
-        country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
-        cityImage: "http://localhost:3000/images/londres.svg",
-      }
     ],
     statistics: {
-      countries: 50,
-      languages: 60,
-      citiesOver100Length: 27
+      countries: 12,
+      languages: 4,
+      citiesOver100Length: 2
     }
   },
   {
@@ -172,37 +148,37 @@ export const mockContinents: Continent[] = [
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
     ],
@@ -223,43 +199,43 @@ export const mockContinents: Continent[] = [
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
     ],
     statistics: {
-      countries: 50,
-      languages: 60,
+      countries: 54,
+      languages: 2000,
       citiesOver100Length: 27
     }
   },
@@ -274,37 +250,37 @@ export const mockContinents: Continent[] = [
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       },
       {
         name: "Londres",
         country: "Reino Unido",
-        countryFlagImage: "http://localhost:3000/images/uk.svg",
+        countryFlagImage: "http://localhost:3000/images/icons/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
     ],

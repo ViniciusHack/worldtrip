@@ -3,7 +3,7 @@ import { City } from "../../../types";
 
 export function CityItem({ cityImage, country, countryFlagImage, name }: City) {
   return (
-    <Box borderRadius={4} border="1px solid" borderColor="yellow.400">
+    <Box borderRadius={4} border="1px solid" borderColor="yellow.400" h="100%">
       <Image src={cityImage} alt={name} h="173"/>
       <Flex p="18px 24px 25px" align="center">
         <Box w="100%">
