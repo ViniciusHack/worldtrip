@@ -5,34 +5,25 @@ import { Cities } from "../components/Continent/Cities";
 import { Description } from "../components/Continent/Description";
 import { Header } from "../components/Header";
 import { api } from '../services/api';
+import { Continent } from "../types";
 
-interface Continent {
-  name: string;
-  description: string;
-  statistics: {
-    countries: number;
-    languages: number;
-    citiesOver100: number;
-  }
-}
-
-interface Details {
+interface DetailsProps {
   continent: Continent;
 }
 
-export default function Details({ continent }: Details) {
+export default function Details({ continent }: DetailsProps) {
+  console.log(continent)
   return (
     <>
-    {console.log(continent)}
       <Header arrow/>
-      <Banner />
+      <Banner {...continent}/>
       <Box    
         maxW="1160px" 
         margin="0 auto"
         w="100%"
       >
-      <Description />
-      <Cities />
+      <Description {...continent}/>
+      <Cities cities={continent.citiesOver100}/>
       </Box>
     </>
   )
@@ -47,13 +38,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({params}) => {
   const { continent } = params
-  const { data: continentInfo } = await api.get(`/${continent}`)
-
-  console.log(continentInfo)
+  const { data } = await api.get(`/${continent}`)
 
   return {
     props: {
-      continent: continentInfo
+      continent: data.continent
     }
   }
 }

@@ -4,10 +4,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Continent } from '../../types';
 import { SliderItem } from './SliderItem';
 
+export interface SliderProps {
+  continents: Continent[];
+}
 
-export function Slider() {
+export function Slider({ continents }: SliderProps) {
+  console.log("Continents Abaixo: ")
+  console.log(continents)
   return (
     <Box px="100" pb="40px">
       <Swiper
@@ -21,54 +27,13 @@ export function Slider() {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/europa-1.svg" 
-            title="Europa"
-            description="O continente mais antigo."
-            slug="europe"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/north-1.jpg"
-            title="America do Norte"
-            description="O nosso continente vizinho."
-            slug="north-america"
-          />
-        </SwiperSlide >
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/south-1.jpg"
-            title="America do Sul"
-            description="O nosso continente."
-            slug="south-america"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/asia-1.jpg"
-            title="Ásia"
-            description="O maior continente."
-            slug="asia"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/africa-1.jpg"
-            title="África"
-            description="O continente berço da humanidade."
-            slug="africa"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderItem 
-            bgImage="/images/Oceania-1.jpg"
-            title="Oceania"
-            description="O continente mais novo."
-            slug="oceania"
-          />
-        </SwiperSlide>
+        {continents.map(continent => (
+          <SwiperSlide key={continent.slug}>
+            <SliderItem 
+              {...continent}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   )

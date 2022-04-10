@@ -1,10 +1,24 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { BannerHome } from "../components/BannerHome";
 import { Feature } from "../components/Features";
 import { Header } from "../components/Header";
 import { Slider } from '../components/Slider';
+import { api } from "../services/api";
+import { Continent } from "../types";
 
 export default function Home() {
+
+  const [continents, setContinents] = useState<Continent[]>([])
+
+  useEffect(() => {
+    async function getAllContinents() {
+      const { data } = await api.get("/continents")
+      return setContinents(data.continents)
+    }
+    getAllContinents();
+  }, [])
+
   return (
     <>
       <Header />
@@ -16,7 +30,7 @@ export default function Home() {
         <Box textAlign="center" pb="52px">
           <Heading fontWeight={500} color="gray.900" lineHeight="54px">Vamos nessa?<br />Então escolha seu continente</Heading>
         </Box>
-        <Slider />
+        <Slider continents={continents}/>
     </>
   )
 }

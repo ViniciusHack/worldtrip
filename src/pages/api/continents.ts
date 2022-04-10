@@ -1,9 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import { Continent } from "../../types";
 
-const mockContinents = [
+export const mockContinents: Continent[] = [
   {
     slug: "europe",
     title: "Europa",
+    feature: "O continente mais antigo.",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
     bgImage: "http://localhost:3000/images/europa-1.svg",
     citiesOver100: [
@@ -43,13 +45,19 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   },
   {
     slug: "north-america",
-    title: "Europa",
+    title: "America do Norte",
+    feature: "O continente mais famoso.",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
-    bgImage: "http://localhost:3000/images/europa-1.svg",
+    bgImage: "http://localhost:3000/images/north-1.jpg",
     citiesOver100: [
       {
         name: "Londres",
@@ -87,13 +95,19 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   },
   {
-    slug: "europe",
-    title: "Europa",
+    slug: "south-america",
+    title: "America do Sul",
+    feature: "O continente resort.",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
-    bgImage: "http://localhost:3000/images/europa-1.svg",
+    bgImage: "http://localhost:3000/images/south-1.jpg",
     citiesOver100: [
       {
         name: "Londres",
@@ -131,13 +145,19 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   },
   {
-    slug: "europe",
-    title: "Europa",
+    slug: "asia",
+    title: "Ásia",
+    feature: "O maior continente.",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
-    bgImage: "http://localhost:3000/images/europa-1.svg",
+    bgImage: "http://localhost:3000/images/asia-1.jpg",
     citiesOver100: [
       {
         name: "Londres",
@@ -175,13 +195,19 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   },
   {
-    slug: "europe",
-    title: "Europa",
+    slug: "africa",
+    title: "África",
+    feature: "O berço do Ser Humano",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
-    bgImage: "http://localhost:3000/images/europa-1.svg",
+    bgImage: "http://localhost:3000/images/africa-1.jpg",
     citiesOver100: [
       {
         name: "Londres",
@@ -219,13 +245,19 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   },
   {
-    slug: "europe",
-    title: "Europa",
+    slug: "oceania",
+    title: "Oceania",
+    feature: "O continente mais novo",
     description: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
-    bgImage: "http://localhost:3000/images/europa-1.svg",
+    bgImage: "http://localhost:3000/images/oceania-1.jpg",
     citiesOver100: [
       {
         name: "Londres",
@@ -263,21 +295,18 @@ const mockContinents = [
         countryFlagImage: "http://localhost:3000/images/uk.svg",
         cityImage: "http://localhost:3000/images/londres.svg",
       }
-    ]
+    ],
+    statistics: {
+      countries: 50,
+      languages: 60,
+      citiesOver100Length: 27
+    }
   }
 ]
 
 
-const continent = ({ query }: NextApiRequest, res: NextApiResponse) => {
-  const { continent } = query
-
-  const continentExists = mockContinents.find(continentInfo => continentInfo.slug === continent)
-
-  if(!continentExists) {
-    return res.status(400).json({ error: "Continent Não existe!"})
-  }
-  
-  return res.status(200).json({ continent: continentExists})
+const continents = (req: NextApiRequest, res: NextApiResponse) => {
+  return res.status(200).json({ continents: mockContinents })
 }
 
-export default continent;
+export default continents;
