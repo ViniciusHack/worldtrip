@@ -1,11 +1,11 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { Continent } from "../../types";
 
-type BannerProps = Pick<Continent, "bgImage" | "title" >
+type BannerProps = Pick<Continent, "bgImage2" | "title" >
 
-export function Banner({bgImage, title}: BannerProps) {
+export function Banner({bgImage2, title}: BannerProps) {
   return (
-    <Box bgImage={bgImage} h="500px" display="flex" alignItems="flex-end" bgSize="cover">
+    <Box bgImage={bgImage2} h="500px" display="flex" alignItems="flex-end" bgSize="cover">
       <Box
       w="100%" 
       maxW="1160px" 

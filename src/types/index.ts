@@ -11,6 +11,7 @@ export interface Continent {
   description: string;
   feature: string;
   bgImage: string;
+  bgImage2: string;
   statistics: {
     countries: number;
     languages: number;

@@ -5,7 +5,6 @@ import { Continent } from "../../types";
 type DescriptionProps = Pick<Continent, "description" | "statistics" >
 
 export function Description({ description, statistics }: DescriptionProps) {
-  console.log(description, statistics)
   return (
     <Flex
       py="20"

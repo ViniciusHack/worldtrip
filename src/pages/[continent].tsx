@@ -12,7 +12,6 @@ interface DetailsProps {
 }
 
 export default function Details({ continent }: DetailsProps) {
-  console.log(continent)
   return (
     <>
       <Header arrow/>

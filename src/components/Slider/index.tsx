@@ -12,8 +12,6 @@ export interface SliderProps {
 }
 
 export function Slider({ continents }: SliderProps) {
-  console.log("Continents Abaixo: ")
-  console.log(continents)
   return (
     <Box px="100" pb="40px">
       <Swiper
@@ -24,8 +22,6 @@ export function Slider({ continents }: SliderProps) {
         pagination={{
           clickable: true,
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         {continents.map(continent => (
           <SwiperSlide key={continent.slug}>
