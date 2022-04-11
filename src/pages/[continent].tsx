@@ -1,6 +1,7 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Banner } from "../components/Continent/Banner";
+import { Cities } from "../components/Continent/Cities";
 import { Description } from "../components/Continent/Description";
 import { Header } from "../components/Header";
 import { api } from '../services/api';
@@ -26,7 +27,7 @@ export default function Details({ continent }: DetailsProps) {
         w="100%"
       >
       <Description {...continent}/>
-      {/* <Cities cities={continent.citiesOver100}/> */}
+      <Cities cities={continent.citiesOver100}/>
       </Box>
     </>
   )

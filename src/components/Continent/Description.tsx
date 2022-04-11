@@ -7,15 +7,15 @@ type DescriptionProps = Pick<Continent, "description" | "statistics" >
 export function Description({ description, statistics }: DescriptionProps) {
   return (
     <Flex
-      py={["6", "20"]}
+      pt={["6", "20"]}
+      pb={["8" ,"20"]}
       flexDirection={["column", "row"]}
       color="gray.900"
       align="center"
       gap={["4","70"]} 
     >
       <Text maxW="600px" textAlign="justify" fontSize={[14, 24]}>{description}</Text>
-      <Box>
-        <Flex gap="42">
+        <Flex gap="42" w="100%">
           <Box textAlign={["left", "center"]}>
             <Text fontSize={["24", "48"]} fontWeight={600} color="yellow.800">{statistics.countries}</Text>
             <Text fontSize={["17", "27"]} fontWeight={[300, 600]}>países</Text>
@@ -32,7 +32,6 @@ export function Description({ description, statistics }: DescriptionProps) {
             </Flex>
           </Box>
         </Flex>
-      </Box>
     </Flex>
   )
 }
