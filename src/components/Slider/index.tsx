@@ -13,7 +13,7 @@ export interface SliderProps {
 
 export function Slider({ continents }: SliderProps) {
   return (
-    <Box px="100" pb="40px">
+    <Box px={[0, 100]} pb="40px">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={50}

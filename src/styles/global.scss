@@ -37,3 +37,25 @@
     display: none;
   }
 }
+
+ @media (max-width: 480px) {
+  .swiper-button-next {
+    background-image: url('../../public/images/mobile-chevron-left.svg');
+    transform: rotateY(180deg);
+    width: 32px !important;
+    height: 32px !important;
+    right: 12px !important;
+  }
+  .swiper-button-prev {
+    background-image: url('../../public/images/mobile-chevron-left.svg');
+    transform: rotateY(0);
+    width: 32px !important;
+    height: 32px !important;
+    left: 8px !important;
+  }
+  .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 3px !important;
+  }
+ }
