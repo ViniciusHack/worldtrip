@@ -1,11 +1,11 @@
 # worldtrip
 worldtrip is an interface of a app for who is looking for traveling
-I created every component with ChakraUI.
+I created every component with ChakraUI. I get every data
 
-## Features
+🔨 ## Features
 - Slides/carousel - Swiper
 - Responsive Mobile and Desktop layout
-
+- Fake API - Next.js
 
 ## ✔️ Getting Started
 ```bash
