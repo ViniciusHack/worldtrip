@@ -1,11 +1,11 @@
-import { Box, Flex, Heading, Image, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
+interface BannerHomeProps {
+  showAirPlane: boolean
+}
 
-export function BannerHome() {
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    xl: true
-  })
+export function BannerHome({showAirPlane}: BannerHomeProps) {
+
 
   return (  
     <Box bgImage="/images/banner-bg.svg" h={[163, 335]} bgSize={"cover"}>
@@ -14,7 +14,7 @@ export function BannerHome() {
           <Heading fontSize={["xl", "3xl"]}lineHeight={["30px","54px"]} color="gray.100" fontWeight={500}>5 Continentes,<br />infinitas possibilidades</Heading>
           <Text color="gray.300" fontSize={["sm","xl"]} fontWeight={400}>Chegou a hora de tirar do papel a viagem que você sempre sonhou</Text>
         </Stack> 
-        {isWideVersion && <Image pt="76" src={"/images/airplane.svg"} alt="Avião amarelo inclinado"/>}
+        {showAirPlane && <Image pt="76" src={"/images/airplane.svg"} alt="Avião amarelo inclinado"/>}
       </Flex>
     </Box>
   )

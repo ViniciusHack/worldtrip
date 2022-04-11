@@ -1,4 +1,4 @@
-import { Box, Center, Heading } from "@chakra-ui/react";
+import { Box, Center, Heading, useBreakpointValue } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { BannerHome } from "../components/BannerHome";
 import { Feature } from "../components/Features";
@@ -8,7 +8,10 @@ import { api } from "../services/api";
 import { Continent } from "../types";
 
 export default function Home() {
-
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    xl: true
+  })
   const [continents, setContinents] = useState<Continent[]>([])
 
   useEffect(() => {
@@ -22,8 +25,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <BannerHome />
-      <Feature />
+      <BannerHome showAirPlane={isWideVersion}/>
+      <Feature showIcons={isWideVersion}/>
       <Center p="10px 0 50px 0">
         <Box width="90px" bgColor="gray.900" h="2px"/>
       </Center>
