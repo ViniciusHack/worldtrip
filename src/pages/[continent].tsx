@@ -1,8 +1,6 @@
-import { Box } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Banner } from "../components/Continent/Banner";
-import { Cities } from "../components/Continent/Cities";
-import { Description } from "../components/Continent/Description";
 import { Header } from "../components/Header";
 import { api } from '../services/api';
 import { Continent } from "../types";
@@ -12,18 +10,23 @@ interface DetailsProps {
 }
 
 export default function Details({ continent }: DetailsProps) {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    xl: true
+  })
+
   return (
     <>
-      <Header arrow/>
+      <Header arrow lgArrow={isWideVersion}/>
       <Banner {...continent}/>
-      <Box    
+      {/* <Box    
         maxW="1160px" 
         margin="0 auto"
         w="100%"
       >
       <Description {...continent}/>
       <Cities cities={continent.citiesOver100}/>
-      </Box>
+      </Box> */}
     </>
   )
 }

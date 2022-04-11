@@ -27,8 +27,8 @@ export default function Home() {
       <Header />
       <BannerHome showAirPlane={isWideVersion}/>
       <Feature showIcons={isWideVersion}/>
-      <Center p={["0 0 6px", "10px 0 50px"]}>
-        <Box width="90px" bgColor="gray.900" h="2px"/>
+      <Center p={["0 0 24px", "10px 0 50px"]}>
+        <Box w={["60px", "90px"]} bgColor="gray.900" h={["1px", "2px"]}/>
       </Center>
         <Box textAlign="center" pb={["20px", "52px"]}>
           <Heading fontWeight={500} color="gray.900" lineHeight={["30px", "54px"]} fontSize={["xl", "3xl"]}>Vamos nessa?<br />Então escolha seu continente</Heading>
