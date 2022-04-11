@@ -1,6 +1,7 @@
-import { useBreakpointValue } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Banner } from "../components/Continent/Banner";
+import { Description } from "../components/Continent/Description";
 import { Header } from "../components/Header";
 import { api } from '../services/api';
 import { Continent } from "../types";
@@ -19,14 +20,14 @@ export default function Details({ continent }: DetailsProps) {
     <>
       <Header arrow lgArrow={isWideVersion}/>
       <Banner {...continent}/>
-      {/* <Box    
-        maxW="1160px" 
+      <Box    
+        maxW={["343px", "1160px"]} 
         margin="0 auto"
         w="100%"
       >
       <Description {...continent}/>
-      <Cities cities={continent.citiesOver100}/>
-      </Box> */}
+      {/* <Cities cities={continent.citiesOver100}/> */}
+      </Box>
     </>
   )
 }
