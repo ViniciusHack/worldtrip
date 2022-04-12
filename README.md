@@ -22,7 +22,7 @@ npm run dev
 yarn dev
 ```
 
-That will start the development mode of the app. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+That will start the development mode of the app. Open [https://worldtrip-jet-psi.vercel.app](https://worldtrip-jet-psi.vercel.app) in your browser to see the result.
 
 
 ## 🔧 Technologies
