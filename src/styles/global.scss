@@ -18,7 +18,7 @@
 }
 
 .swiper-button-next {
-  background-image: url('../../public/images/chevron-left.svg');
+  background-image: url('/images/chevron-left.svg');
   background-repeat: no-repeat;
   background-position: center;
   right: 20px !important;
@@ -28,7 +28,7 @@
 }
 
 .swiper-button-prev {
-  background-image: url('../../public/images/chevron-left.svg');
+  background-image: url('/images/chevron-left.svg');
   background-repeat: no-repeat;
   background-position: center;
   transform: rotateY(180deg);
@@ -40,14 +40,14 @@
 
  @media (max-width: 480px) {
   .swiper-button-next {
-    background-image: url('../../public/images/mobile-chevron-left.svg');
+    background-image: url('/images/mobile-chevron-left.svg');
     transform: rotateY(180deg);
     width: 32px !important;
     height: 32px !important;
     right: 12px !important;
   }
   .swiper-button-prev {
-    background-image: url('../../public/images/mobile-chevron-left.svg');
+    background-image: url('/images/mobile-chevron-left.svg');
     transform: rotateY(0);
     width: 32px !important;
     height: 32px !important;
